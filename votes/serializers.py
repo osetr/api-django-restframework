@@ -9,7 +9,6 @@ class VoteListSerializer(serializers.ModelSerializer):
 
 
 class VoteDetailSerializer(serializers.ModelSerializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Vote
         fields = '__all__'
