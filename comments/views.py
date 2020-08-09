@@ -1,8 +1,8 @@
 from rest_framework import generics
 from posts.serializers import (
-    PostDetailSerializer, PostListSerializer,
-    UserList, VoteDetailSerializer, VoteListSerializer)
+    PostDetailSerializer, PostListSerializer)
 from comments.serializers import CommentDetailSerializer
+from votes.serializers import VoteDetailSerializer, VoteListSerializer
 from posts.models import Post, User
 from votes.models import Vote
 from comments.models import Comment

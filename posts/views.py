@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from posts.serializers import (
-    PostDetailSerializer, PostListSerializer,
-    UserList)
+    PostDetailSerializer, PostListSerializer)
 from comments.serializers import CommentDetailSerializer
 from votes.serializers import VoteDetailSerializer, VoteListSerializer
 from rest_framework import serializers
@@ -59,10 +58,6 @@ class CommentUpdateView(generics.CreateAPIView):
         return Response(status=status.HTTP_201_CREATED)
     permission_classes = (IsAuthenticated, )
 
-class UserListView(generics.ListAPIView):
-    serializer_class = UserList
-    queryset = User.objects.all()
-    permission_classes = (IsAdminUser, )
 
 class VoteView(generics.CreateAPIView):
     serializer_class = VoteDetailSerializer

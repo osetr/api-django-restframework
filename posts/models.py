@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from users.models import User
 import datetime
-User = get_user_model()
+
 
 class Post(models.Model):
     title = models.CharField(verbose_name='Title', max_length=25)

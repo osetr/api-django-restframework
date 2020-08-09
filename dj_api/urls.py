@@ -6,5 +6,6 @@ urlpatterns = [
     path('auth/', include('djoser.urls.jwt')),
     path('posts/', include('posts.urls')),
     path("comments/", include('comments.urls')),
-    path("votes/", include('votes.urls'))
+    path("votes/", include('votes.urls')),
+    path("users/", include('users.urls')),
 ]

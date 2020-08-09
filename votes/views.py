@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from posts.serializers import (
-    PostDetailSerializer, PostListSerializer,
-    UserList)
+    PostDetailSerializer, PostListSerializer)
 from comments.serializers import CommentDetailSerializer
 from votes.serializers import VoteDetailSerializer, VoteListSerializer
 from rest_framework import serializers
