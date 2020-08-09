@@ -3,9 +3,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('djoser.urls.jwt')),
-    path('posts/', include('posts.urls')),
-    path("comments/", include('comments.urls')),
-    path("votes/", include('votes.urls')),
-    path("users/", include('users.urls')),
+    path('api/v1/auth/', include('djoser.urls')),
+    path('api/v1/auth/', include('djoser.urls.jwt')),
+    path('api/v1/posts/', include('posts.urls')),
+    path("api/v1/comments/", include('comments.urls')),
+    path("api/v1/votes/", include('votes.urls')),
+    path("api/v1/users/", include('users.urls')),
 ]
