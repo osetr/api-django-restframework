@@ -6,11 +6,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0007_auto_20200809_1720'),
+        ("posts", "0007_auto_20200809_1720"),
     ]
 
     operations = [
-        migrations.DeleteModel(
-            name='Comment',
-        ),
+        migrations.DeleteModel(name="Comment",),
     ]

@@ -7,4 +7,4 @@ from rest_framework.permissions import IsAdminUser
 class UserListView(generics.ListAPIView):
     serializer_class = UserList
     queryset = User.objects.all()
-    permission_classes = (IsAdminUser, )
+    permission_classes = (IsAdminUser,)

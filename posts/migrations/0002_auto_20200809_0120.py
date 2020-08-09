@@ -6,18 +6,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0001_initial'),
+        ("posts", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='post',
-            name='author',
-            field=models.CharField(editable=False, max_length=25, verbose_name='Author'),
+            model_name="post",
+            name="author",
+            field=models.CharField(
+                editable=False, max_length=25, verbose_name="Author"
+            ),
         ),
         migrations.AlterField(
-            model_name='post',
-            name='date',
+            model_name="post",
+            name="date",
             field=models.DateTimeField(auto_now_add=True),
         ),
     ]

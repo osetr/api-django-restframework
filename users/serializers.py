@@ -3,6 +3,6 @@ from users.models import User
 
 
 class UserList(serializers.ModelSerializer):
-        class Meta:
-            model = User
-            fields = '__all__'
+    class Meta:
+        model = User
+        fields = "__all__"

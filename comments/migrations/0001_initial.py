@@ -11,17 +11,43 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('posts', '0008_delete_comment'),
+        ("posts", "0008_delete_comment"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Comment',
+            name="Comment",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('content', models.CharField(max_length=25, verbose_name='Content')),
-                ('author', models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User')),
-                ('post', models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to='posts.post', verbose_name='Vote')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("content", models.CharField(max_length=25, verbose_name="Content")),
+                (
+                    "author",
+                    models.ForeignKey(
+                        blank=True,
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="User",
+                    ),
+                ),
+                (
+                    "post",
+                    models.ForeignKey(
+                        blank=True,
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="posts.post",
+                        verbose_name="Vote",
+                    ),
+                ),
             ],
         ),
     ]

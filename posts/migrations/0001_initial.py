@@ -16,14 +16,34 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name="Post",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=25, verbose_name='Title')),
-                ('date', models.DateTimeField(default=datetime.date(2020, 8, 9), editable=False)),
-                ('author', models.CharField(max_length=25, verbose_name='Author')),
-                ('upvotes', models.IntegerField(default=0, verbose_name='Upvotes')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=25, verbose_name="Title")),
+                (
+                    "date",
+                    models.DateTimeField(
+                        default=datetime.date(2020, 8, 9), editable=False
+                    ),
+                ),
+                ("author", models.CharField(max_length=25, verbose_name="Author")),
+                ("upvotes", models.IntegerField(default=0, verbose_name="Upvotes")),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="User",
+                    ),
+                ),
             ],
         ),
     ]

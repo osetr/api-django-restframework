@@ -9,27 +9,73 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('posts', '0006_auto_20200809_1230'),
+        ("posts", "0006_auto_20200809_1230"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='vote',
-            name='post',
-            field=models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to='posts.post', verbose_name='Vote'),
+            model_name="vote",
+            name="post",
+            field=models.ForeignKey(
+                blank=True,
+                editable=False,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="posts.post",
+                verbose_name="Vote",
+            ),
         ),
         migrations.AlterField(
-            model_name='vote',
-            name='user',
-            field=models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User'),
+            model_name="vote",
+            name="user",
+            field=models.ForeignKey(
+                blank=True,
+                editable=False,
+                on_delete=django.db.models.deletion.CASCADE,
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="User",
+            ),
         ),
         migrations.CreateModel(
-            name='Comment',
+            name="Comment",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('content', models.CharField(blank=True, editable=False, max_length=25, verbose_name='Conetent')),
-                ('author', models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User')),
-                ('post', models.ForeignKey(blank=True, editable=False, on_delete=django.db.models.deletion.CASCADE, to='posts.post', verbose_name='Vote')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "content",
+                    models.CharField(
+                        blank=True,
+                        editable=False,
+                        max_length=25,
+                        verbose_name="Conetent",
+                    ),
+                ),
+                (
+                    "author",
+                    models.ForeignKey(
+                        blank=True,
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="User",
+                    ),
+                ),
+                (
+                    "post",
+                    models.ForeignKey(
+                        blank=True,
+                        editable=False,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="posts.post",
+                        verbose_name="Vote",
+                    ),
+                ),
             ],
         ),
     ]

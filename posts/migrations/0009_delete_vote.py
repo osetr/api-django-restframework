@@ -6,11 +6,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0008_delete_comment'),
+        ("posts", "0008_delete_comment"),
     ]
 
     operations = [
-        migrations.DeleteModel(
-            name='Vote',
-        ),
+        migrations.DeleteModel(name="Vote",),
     ]

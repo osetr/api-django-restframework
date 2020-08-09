@@ -8,20 +8,30 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('posts', '0012_auto_20200810_0124'),
+        ("posts", "0012_auto_20200810_0124"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('votes', '0001_initial'),
+        ("votes", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='vote',
-            name='post',
-            field=models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, to='posts.post', verbose_name='Post'),
+            model_name="vote",
+            name="post",
+            field=models.ForeignKey(
+                editable=False,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="posts.post",
+                verbose_name="Post",
+            ),
         ),
         migrations.AlterField(
-            model_name='vote',
-            name='user',
-            field=models.ForeignKey(editable=False, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='User'),
+            model_name="vote",
+            name="user",
+            field=models.ForeignKey(
+                editable=False,
+                on_delete=django.db.models.deletion.CASCADE,
+                to=settings.AUTH_USER_MODEL,
+                verbose_name="User",
+            ),
         ),
     ]
