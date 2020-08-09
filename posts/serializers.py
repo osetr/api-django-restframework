@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from posts.models import Post, User
+from posts.models import Post, User, Vote
 
 class PostDetailSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
@@ -11,9 +11,20 @@ class PostDetailSerializer(serializers.ModelSerializer):
 class PostListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id', 'author']
+        fields = '__all__'
 
 class UserList(serializers.ModelSerializer):
         class Meta:
             model = User
             fields = '__all__'
+
+class VoteListSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Vote
+            fields = '__all__'
+
+class VoteDetailSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    class Meta:
+        model = Vote
+        fields = '__all__'
