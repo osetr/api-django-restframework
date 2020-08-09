@@ -1,5 +1,8 @@
 from django.urls import path
-from comments.views import *
+from comments.views import (
+    CommentGetView, CommentCreateView,
+    CommentDeleteView, CommentGetAllView,
+    CommentUpdateView)
 
 urlpatterns = [
     path("all/", CommentGetAllView.as_view()),

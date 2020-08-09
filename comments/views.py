@@ -14,7 +14,8 @@ class CommentCreateView(generics.CreateAPIView):
             post = Post.objects.get(pk=pk)
         except:
             return Response(
-                data={"error": "post not found"}, status=status.HTTP_404_NOT_FOUND
+                data={"error": "post not found"},
+                status=status.HTTP_404_NOT_FOUND
             )
         try:
             content = request.data["content"]
@@ -26,7 +27,8 @@ class CommentCreateView(generics.CreateAPIView):
         user = User.objects.get(pk=request.user.id)
         Comment.objects.create(author=user, post=post, content=content)
         return Response(
-            data={"response": "successfully commented"}, status=status.HTTP_201_CREATED
+            data={"response": "successfully commented"},
+            status=status.HTTP_201_CREATED
         )
 
     permission_classes = (IsAuthenticated,)
@@ -53,7 +55,8 @@ class CommentGetView(generics.CreateAPIView):
                 status=status.HTTP_404_NOT_FOUND,
             )
         return Response(
-            CommentDetailSerializer(queryset).data, status=status.HTTP_201_CREATED
+            CommentDetailSerializer(queryset).data,
+            status=status.HTTP_201_CREATED
         )
 
     permission_classes = (IsAuthenticated,)
@@ -65,7 +68,8 @@ class CommentDeleteView(generics.CreateAPIView):
             comment_obj = Comment.objects.get(pk=pk)
         except Comment.DoesNotExist:
             return Response(
-                data={"error": "comment not found"}, status=status.HTTP_404_NOT_FOUND
+                data={"error": "comment not found"},
+                status=status.HTTP_404_NOT_FOUND
             )
         if comment_obj.author.id == request.user.id:
             comment_obj.delete()
@@ -85,7 +89,8 @@ class CommentUpdateView(generics.CreateAPIView):
             comment_obj = Comment.objects.get(pk=pk)
         except Comment.DoesNotExist:
             return Response(
-                data={"error": "comment not found"}, status=status.HTTP_404_NOT_FOUND
+                data={"error": "comment not found"},
+                status=status.HTTP_404_NOT_FOUND
             )
         if comment_obj.author.id == request.user.id:
             try:

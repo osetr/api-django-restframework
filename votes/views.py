@@ -20,15 +20,18 @@ class VoteView(generics.CreateAPIView):
                 post.save()
             except:
                 return Response(
-                    data={"error": "post not found"}, status=status.HTTP_404_NOT_FOUND
+                    data={"error": "post not found"},
+                    status=status.HTTP_404_NOT_FOUND
                 )
             user = User.objects.get(pk=user)
             Vote.objects.create(user=user, post=post)
             return Response(
-                data={"response": "successfuly upvoted"}, status=status.HTTP_200_OK
+                data={"response": "successfuly upvoted"},
+                status=status.HTTP_200_OK
             )
         return Response(
-            data={"error": "user already upvoted post"}, status=status.HTTP_409_CONFLICT
+            data={"error": "user already upvoted post"},
+            status=status.HTTP_409_CONFLICT
         )
 
     permission_classes = (IsAuthenticated,)

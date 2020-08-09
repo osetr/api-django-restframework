@@ -1,5 +1,6 @@
-from django.urls import path, include
-from posts.views import *
+from django.urls import path
+from posts.views import (
+    PostListView, PostCreateView, PostDetailView)
 
 urlpatterns = [
     path("post/create/", PostCreateView.as_view()),

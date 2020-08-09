@@ -9,9 +9,13 @@ class Post(models.Model):
     content = models.TextField(
         verbose_name="Content", default="no content", max_length=250
     )
-    author = models.CharField(verbose_name="Author", editable=False, max_length=25)
+    author = models.CharField(verbose_name="Author",
+                              editable=False,
+                              max_length=25)
     upvotes = models.IntegerField(verbose_name="Upvotes", default=0)
-    user = models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
+    user = models.ForeignKey(User,
+                             verbose_name="User",
+                             on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s by %s" % (self.title, self.author)
