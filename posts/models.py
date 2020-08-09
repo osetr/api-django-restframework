@@ -9,9 +9,3 @@ class Post(models.Model):
     author = models.CharField(verbose_name='Author', blank=True, editable=False, max_length=25)
     upvotes = models.IntegerField(verbose_name='Upvotes', default=0)
     user = models.ForeignKey(User, verbose_name='User', on_delete=models.CASCADE)
-
-class Vote(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE,blank=True, editable=False,
-                                      verbose_name='Vote')
-    user = models.ForeignKey(User, verbose_name='User',
-                                   on_delete=models.CASCADE, blank=True, editable=False)
