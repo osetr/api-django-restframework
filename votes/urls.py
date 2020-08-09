@@ -1,7 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from votes.views import *
 
 urlpatterns = [
-    path('vote/<int:user__id>/', VoteView.as_view(), name="test"),
     path('all/', VoteListView.as_view()),
+    path('vote/<int:pk>/', VoteView.as_view()),
 ]

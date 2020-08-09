@@ -1,13 +1,9 @@
 from django.db import models
 from users.models import User
-from django.core.validators import (
-    MaxValueValidator, MinValueValidator)
 from datetime import datetime
 
 
 class Post(models.Model):
-    min_value = MinValueValidator(1)
-    max_value = MaxValueValidator(250)
     title = models.CharField(verbose_name='Title', max_length=25)
     date = models.DateTimeField(default=datetime.now(),
                                 editable=False)
