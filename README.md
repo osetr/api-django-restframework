@@ -17,3 +17,10 @@ Here you can find requests, which you are able to do with this api. Actually, it
 
 * /api/v1/auth/users/ - POST request for adding new user, available for all users, ('username', 'email', password') fields in body are required
 * 
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
