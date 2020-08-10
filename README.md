@@ -9,7 +9,7 @@ After cloning this repository locally, be sure to add yourself .env file with im
 * POSTGRES_DB = 'database'
 * SECRET_KEY = 'secret'
   
-Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is not closed and you can check API out there, if you have busy your 80 port with another proxy e.g.
+Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is not closed and you can check API out there, if you your 80 port is busy with another proxy e.g.
 
 api-documentation
 -----------------
