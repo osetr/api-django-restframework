@@ -24,4 +24,6 @@ Here you can find requests, which you are able to do with this api. Actually, it
     <dd>/api/v1/users/all/ - GET for getting all users list, only for authanticated admin users</dd>
   <dt>/posts/</dt>
     <dd>/api/v1/posts/all/ - GET for getting all posts list, only for authanticated admin users</dd>
+    <dd>/api/v1/posts/post/create/ - POST for creating new post, only for authenticated users, ('title', content') fields in body are required<dd> 
+    <dd>/api/v1/posts/post/detail/<post_id>/ - GET for getting info about post<dd>
 </dl>
