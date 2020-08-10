@@ -18,3 +18,15 @@ services:
                         - 5432:5432
                 expose:
                         - '5432'
+        app:
+                build: .
+                container_name: app
+                restart: always
+                depends_on:
+                        - postgresql
+                ports:
+                        - "8000:8000"
+                command: /bin/bash -c "python3 manage.py makemigrations"          
+                command: /bin/bash -c "python3 manage.py migrate"
+                command: /bin/bash -c "python3 manage.py runserver"
+                network_mode: host
