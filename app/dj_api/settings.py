@@ -68,7 +68,7 @@ DATABASES = {
         'USER': 'user',
         'PASSWORD': 'pass',
         'HOST': 'localhost',
-        'PORT': ''                
+        'PORT': ''                 # установить пустую строку по умолчанию
     }
 }
 AUTH_PASSWORD_VALIDATORS = [
