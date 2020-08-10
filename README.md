@@ -1,19 +1,19 @@
 api-django-restframework
 ===========
-It is an implementation of **an** API application, written using django restframework. It implements functionality for **authenticating** users, adding posts, upvoting, getting info about all **such** things. The api was containerized into docker. Therefore, you can very quickly untap this API by following the instructions below.
+It is an implementation of an API application, written using django restframework. It implements functionality for authenticating users, adding posts, upvoting, getting info about all such things. The api was containerized into docker. Therefore, you can very quickly untap this API by following the instructions below.
 
-After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of **the** current folder. In the following formats:
+After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of the current folder. In the following formats:
 
 * POSTGRES_USER = 'user'
 * POSTGRES_PASSWORD = 'password'
 * POSTGRES_DB = 'database'
 * SECRET_KEY = 'secret'
   
-Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is **opened** and you can check API out there, if you have your 80 port **busy** with another proxy e.g.
+Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is opened and you can check API out there, if you have your 80 port busy with another proxy e.g.
 
 api-documentation
 -----------------
-Here you can find requests, **that you can make** with this API. Actually, it's just a general **overview** of them, for more **detailed** info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious **overview**. Or try this API in-place by following [link](http://34.69.235.47/).
+Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview. Or try this API in-place by following [link](http://34.69.235.47/).
 
 <dl>
   <dt>/auth/</dt>
