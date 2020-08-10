@@ -19,6 +19,9 @@ Here you can find requests, which you are able to do with this api. Actually, it
   <dt>/auth/</dt>
     <dd>/api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required<dd>
     <dd>/api/v1/auth/jwt/create/ - POST for authorizating using jwt access&refresh tokens, ('username', password') fields in body are required<dd>
-  <dt>Markdown in HTML</dt>
-    <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+    <dd>/api/v1/auth/jwt/refresh/ - POST for refreshing access token, ('refresh') field in body are required<dd>
+  <dt>/users/</dt>
+    <dd>/api/v1/users/all/ - GET for getting all users list, only for authanticated admin users</dd>
+  <dt>/posts/</dt>
+    <dd>/api/v1/posts/all/ - GET for getting all posts list, only for authanticated admin users</dd>
 </dl>
