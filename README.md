@@ -9,11 +9,11 @@ After cloning this repository locally, be sure to add yourself .env file with im
 * POSTGRES_DB = 'database'
 * SECRET_KEY = 'secret'
   
-Afterwards up docker-compose and check your api http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is not closed and you can check api out there, if you have busy your 80 port with another proxy e.g.
+Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is not closed and you can check API out there, if you have busy your 80 port with another proxy e.g.
 
 api-documentation
 -----------------
-Here you can find requests, which you are able to do with this api. Actually, it's just a general view of them, for more detail info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), that can give you more concsious view.
+Here you can find requests, which you are able to do with this API. Actually, it's just a general view of them, for more detail info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), that can give you more concsious view or try this API in-place by following [link](http://34.69.235.47/).
 
 <dl>
   <dt>/auth/</dt>
