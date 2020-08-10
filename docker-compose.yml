@@ -24,6 +24,8 @@ services:
                 restart: always
                 ports:
                         - "8000:8000"
+                depends_on:
+                        - postgresql
                 environment:
                         - POSTGRES_USER=${POSTGRES_USER}
                         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -31,3 +33,11 @@ services:
                         - SECRET_KEY=${SECRET_KEY}
                 entrypoint: /bin/bash -c "systemctl restart cron; ./entrypoint.sh;"
                 network_mode: host
+        nginx:
+                build: ./nginx
+                container_name: nginx
+                restart: always
+                ports:
+                        - 80:80
+                network_mode: host
+
