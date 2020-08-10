@@ -31,4 +31,10 @@ Here you can find requests, which you are able to do with this api. Actually, it
   <dt>/votes/</dt>
     <dd>/api/v1/votes/all/ - GET for getting all votes list, only for authanticated admin users</dd>
     <dd>/api/v1/votes/vote/<post_id>/ - POST for upvoting post, only for authenticated users<dd> 
+  <dt>/comments/</dt>
+    <dd>/api/v1/comments/comment/post/<post_id>/ - POST for comment post, only for authanticated users, ('content') field in body are required</dd>
+    <dd>/api/v1/comments/all/ - GET for getting all comments list, only for authanticated admin users<dd>
+    <dd>/api/v1/comments/comment/<comment_id>/ - GET for getting comment info, only for authanticated admin users<dd>
+    <dd>/api/v1/comments/comment/<comment_id>/delete/ - DELETE for deleting comment, only for comment owner<dd>
+    <dd>/api/v1/comments/comment/<comment_id>/update/ - PUT for updating comment, only for comment owner<dd>
 </dl>
