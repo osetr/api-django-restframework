@@ -1,8 +1,12 @@
 from pathlib import Path
+from dotenv import load_dotenv, find_dotenv
+import os
+
+load_dotenv(find_dotenv())
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-SECRET_KEY = "_o6ose32om9qzii&95ae8dige-k__gg7arkh102r2&1hjgd-2="
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True
 
@@ -64,11 +68,11 @@ WSGI_APPLICATION = "dj_api.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database',
-        'USER': 'user',
-        'PASSWORD': 'pass',
+        'NAME': os.getenv("POSTGRES_DB"),
+        'USER': os.getenv("POSTGRES_USER"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
         'HOST': 'localhost',
-        'PORT': ''                 # установить пустую строку по умолчанию
+        'PORT': ''
     }
 }
 AUTH_PASSWORD_VALIDATORS = [

@@ -24,5 +24,10 @@ services:
                 restart: always
                 ports:
                         - "8000:8000"
-                entrypoint: /bin/bash -c "./entrypoint.sh"
+                environment:
+                        - POSTGRES_USER=${POSTGRES_USER}
+                        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+                        - POSTGRES_DB=${POSTGRES_DB}
+                        - SECRET_KEY=${SECRET_KEY}
+                entrypoint: /bin/bash -c "systemctl restart cron; ./entrypoint.sh;"
                 network_mode: host
