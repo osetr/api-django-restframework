@@ -26,7 +26,5 @@ services:
                         - postgresql
                 ports:
                         - "8000:8000"
-                command: /bin/bash -c "python3 manage.py makemigrations"          
-                command: /bin/bash -c "python3 manage.py migrate"
-                command: /bin/bash -c "python3 manage.py runserver"
+                entrypoint: /bin/bash -c "python3 manage.py makemigrations; python3 manage.py migrate; python3 manage.py runserver"          
                 network_mode: host
