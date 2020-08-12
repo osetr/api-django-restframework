@@ -2,8 +2,6 @@ from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 import os
 
-load_dotenv(find_dotenv())
-
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -27,8 +25,6 @@ INSTALLED_APPS = [
     "votes",
     "djoser",
     "users",
-    "dj_api",
-    "django_crontab",
     "django_cron",
 ]
 
