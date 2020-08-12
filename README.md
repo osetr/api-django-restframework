@@ -1,5 +1,8 @@
 api-django-restframework
 ===========
+
+description
+-----------
 It is an implementation of an API application, written using django restframework. It implements functionality for authenticating users, adding posts, upvoting, getting info about all such things. The api was containerized into docker. Therefore, you can very quickly untap this API by following the instructions below.
 
 After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of the current folder. In the following formats:
