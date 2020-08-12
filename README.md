@@ -11,7 +11,7 @@ After cloning this repository locally, be sure to add yourself .env file with im
 * POSTGRES_PASSWORD = 'password'
 * POSTGRES_DB = 'database'
 * SECRET_KEY = 'secret'
-* VOTES_RESET_TIMEDELTA = '1440' (minutes)
+* VOTES_RESET_TIMEDELTA = '1440' (reset post upvotes count once per 1440 minutes)
   
 Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is opened and you can check API out there, if you have your 80 port busy with another proxy e.g.
 
