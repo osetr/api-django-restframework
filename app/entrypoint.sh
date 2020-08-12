@@ -12,6 +12,6 @@ echo "PostgreSQL started"
 
 sleep 5
 python3 manage.py migrate
-python3 manage.py runserver 0.0.0.0:8000
+python3 manage.py runserver 0.0.0.0:8000 & celery worker -A dj_api.celery -B
 
 exec "$@"

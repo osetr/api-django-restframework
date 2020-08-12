@@ -1,5 +1,4 @@
 from pathlib import Path
-from dotenv import load_dotenv, find_dotenv
 import os
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -25,7 +24,6 @@ INSTALLED_APPS = [
     "votes",
     "djoser",
     "users",
-    "django_cron",
 ]
 
 REST_FRAMEWORK = {
@@ -96,8 +94,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-CRON_CLASSES = [
-    "votes.cron.MyCronJob",
-]
-
 ALLOW_PARALLEL_RUNS = True
+
+CELERY_BROKER_URL = "redis://localhost:6379"
+
+CELERY_ACCEPT_CONTENT = ['json']
+
+CELERY_TASK_SERIALIZER = 'json'
