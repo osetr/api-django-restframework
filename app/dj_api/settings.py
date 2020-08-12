@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'app']
 
@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     "votes",
     "djoser",
     "users",
+    "dj_api",
+    "django_crontab",
+    "django_cron",
 ]
 
 REST_FRAMEWORK = {
@@ -84,6 +87,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
+
 LANGUAGE_CODE = "ru"
 
 TIME_ZONE = "Europe/Kiev"
@@ -95,3 +99,9 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = "/static/"
+
+CRON_CLASSES = [
+    "votes.cron.MyCronJob",
+]
+
+ALLOW_PARALLEL_RUNS = True

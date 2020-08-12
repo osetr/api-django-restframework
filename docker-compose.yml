@@ -31,7 +31,7 @@ services:
                         - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
                         - POSTGRES_DB=${POSTGRES_DB}
                         - SECRET_KEY=${SECRET_KEY}
-                entrypoint: /bin/bash -c "systemctl restart cron; ./entrypoint.sh;"
+                entrypoint: /bin/bash -c "./entrypoint.sh;"
                 network_mode: host
         nginx:
                 build: ./nginx
