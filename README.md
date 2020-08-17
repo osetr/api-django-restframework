@@ -17,7 +17,7 @@ Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this a
 
 api-documentation
 -----------------
-Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview. Or try this API in-place by following [link](http://34.69.235.47/).
+Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview.
 
 <dl>
   <dt>/auth/</dt>
