@@ -7,7 +7,7 @@ It is an implementation of an API application, written using django restframewor
 
 After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of the current folder. In the following formats:
 
-```
+```sh
 * POSTGRES_USER = 'user'
 * POSTGRES_PASSWORD = 'password'
 * POSTGRES_DB = 'database'
@@ -21,7 +21,7 @@ api-documentation
 -----------------
 Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview.
 
-```js
+```
   * /auth/
       /api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required
       /api/v1/auth/jwt/create/ - POST for authorizating using jwt access&refresh tokens, ('username', password') fields in body are required
