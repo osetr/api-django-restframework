@@ -21,26 +21,26 @@ api-documentation
 -----------------
 Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview.
 
-<dl>
-  <dt>/auth/</dt>
-    <dd>/api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required<dd>
-    <dd>/api/v1/auth/jwt/create/ - POST for authorizating using jwt access&refresh tokens, ('username', password') fields in body are required<dd>
-    <dd>/api/v1/auth/jwt/refresh/ - POST for refreshing access token, ('refresh') field in body are required<dd>
-  <dt>/users/</dt>
-    <dd>/api/v1/users/all/ - GET for getting all users list, only for authanticated admin users</dd>
-  <dt>/posts/</dt>
-    <dd>/api/v1/posts/all/ - GET for getting all posts list, only for authanticated admin users</dd>
-    <dd>/api/v1/posts/post/create/ - POST for creating new post, only for authenticated users, ('title', content') fields in body are required<dd> 
-    <dd>/api/v1/posts/post/detail/<post_id>/ - GET for getting info about post<dd>
-    <dd>/api/v1/posts/post/detail/<post_id>/ - DELETE for deleting post, only for post owner<dd>
-    <dd>/api/v1/posts/post/detail/<post_id>/ - PUT for updating post data, ('title', content') fields in body are required<dd>
-  <dt>/votes/</dt>
-    <dd>/api/v1/votes/all/ - GET for getting all votes list, only for authanticated admin users</dd>
-    <dd>/api/v1/votes/vote/<post_id>/ - POST for upvoting post, only for authenticated users<dd> 
-  <dt>/comments/</dt>
-    <dd>/api/v1/comments/comment/post/<post_id>/ - POST for comment post, only for authanticated users, ('content') field in body are required</dd>
-    <dd>/api/v1/comments/all/ - GET for getting all comments list, only for authanticated admin users<dd>
-    <dd>/api/v1/comments/comment/<comment_id>/ - GET for getting comment info, only for authanticated admin users<dd>
-    <dd>/api/v1/comments/comment/<comment_id>/delete/ - DELETE for deleting comment, only for comment owner<dd>
-    <dd>/api/v1/comments/comment/<comment_id>/update/ - PUT for updating comment, only for comment owner<dd>
-</dl>
+```sh
+  * /auth/
+    /api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required
+    /api/v1/auth/jwt/create/ - POST for authorizating using jwt access&refresh tokens, ('username', password') fields in body are required
+    /api/v1/auth/jwt/refresh/ - POST for refreshing access token, ('refresh') field in body are required
+  * /users/
+    /api/v1/users/all/ - GET for getting all users list, only for authanticated admin users
+  * /posts/
+    /api/v1/posts/all/ - GET for getting all posts list, only for authanticated admin users
+    /api/v1/posts/post/create/ - POST for creating new post, only for authenticated users, ('title', content') fields in body are required 
+    /api/v1/posts/post/detail/<post_id>/ - GET for getting info about post
+    /api/v1/posts/post/detail/<post_id>/ - DELETE for deleting post, only for post owner
+    /api/v1/posts/post/detail/<post_id>/ - PUT for updating post data, ('title', content') fields in body are required
+  * /votes/
+    /api/v1/votes/all/ - GET for getting all votes list, only for authanticated admin users
+    /api/v1/votes/vote/<post_id>/ - POST for upvoting post, only for authenticated users 
+  * /comments/
+    /api/v1/comments/comment/post/<post_id>/ - POST for comment post, only for authanticated users, ('content') field in body are required
+    /api/v1/comments/all/ - GET for getting all comments list, only for authanticated admin users
+    /api/v1/comments/comment/<comment_id>/ - GET for getting comment info, only for authanticated admin users
+    /api/v1/comments/comment/<comment_id>/delete/ - DELETE for deleting comment, only for comment owner
+    /api/v1/comments/comment/<comment_id>/update/ - PUT for updating comment, only for comment owner
+```
