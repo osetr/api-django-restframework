@@ -7,7 +7,7 @@ It is an implementation of an API application, written using django restframewor
 
 After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of the current folder. In the following formats:
 
-```sh
+```
 * POSTGRES_USER = 'user'
 * POSTGRES_PASSWORD = 'password'
 * POSTGRES_DB = 'database'
