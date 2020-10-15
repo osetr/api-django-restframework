@@ -21,7 +21,6 @@ api-documentation
 -----------------
 Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview.
 
-```
 <dl>
   <dt>/auth/</dt>
     <dd>/api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required<dd>
@@ -45,4 +44,3 @@ Here you can find requests, that you can make with this API. Actually, it's just
     <dd>/api/v1/comments/comment/<comment_id>/delete/ - DELETE for deleting comment, only for comment owner<dd>
     <dd>/api/v1/comments/comment/<comment_id>/update/ - PUT for updating comment, only for comment owner<dd>
 </dl>
-```
