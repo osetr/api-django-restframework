@@ -7,11 +7,13 @@ It is an implementation of an API application, written using django restframewor
 
 After cloning this repository locally, be sure to add yourself .env file with important keys for the database and for the api server itself inside of the current folder. In the following formats:
 
+```sh
 * POSTGRES_USER = 'user'
 * POSTGRES_PASSWORD = 'password'
 * POSTGRES_DB = 'database'
 * SECRET_KEY = 'secret'
 * VOTES_RESET_TIMEDELTA = '1440' (reset post upvotes count once per 1440 minutes)
+```
   
 Afterwards up docker-compose and check your API http://0.0.0.0/. Actually this app uses nginx proxy for redirecting requests on the http://0.0.0.0:8000/. But 8000 port is opened and you can check API out there, if you have your 80 port busy with another proxy e.g.
 
@@ -19,6 +21,7 @@ api-documentation
 -----------------
 Here you can find requests, that you can make with this API. Actually, it's just a general overview of them, for more detailed info you can follow link on the [postman collection](https://www.getpostman.com/collections/220dab40d84b3242401b), it can give you more concsious overview.
 
+```
 <dl>
   <dt>/auth/</dt>
     <dd>/api/v1/auth/users/ - POST for adding new user, available for all users, ('username', 'email', password') fields in body are required<dd>
@@ -42,3 +45,4 @@ Here you can find requests, that you can make with this API. Actually, it's just
     <dd>/api/v1/comments/comment/<comment_id>/delete/ - DELETE for deleting comment, only for comment owner<dd>
     <dd>/api/v1/comments/comment/<comment_id>/update/ - PUT for updating comment, only for comment owner<dd>
 </dl>
+```
